@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Team</title>
+</head>
+<body>
+    <h1>Update Team</h1>
+    //Nombre de titulo actulizar
+    <form id="update-team-form">
+        <div>
+            <label for="team-id">Team ID:</label>
+            // La id del equipo que se desea actualizar
+            <input type="number" id="team-id" required>
+        </div>
+        <div>
+            <label for="team-name">Name:</label>
+            // El nuevo nombre
+            <input type="text" id="team-name" required>
+        </div>
+        <div>
+            <label for="team-description">Description:</label>
+            // La nueva descripción 
+            <input type="text" id="team-description" required>
+        </div>
+        <div>
+            <label for="team-member-count">Member Count:</label>
+            <input type="number" id="team-member-count" required>
+        </div>
+
+        <button type="submit">Update Team</button>
+        // Botón para enviar el formulario y actualizar
+    </form>
+
+    <script type="module" src="./update-team.js"></script>
+</body>
+</html>
+//Htmml al stilo AXEL LOPEZ
