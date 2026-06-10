@@ -4,12 +4,10 @@ import TeamRequest from "../shared/models/request/team.request.js";
 const teamsService = new TeamsService();
 
 document
-    .getElementById("update-team-form")
+    .getElementById("create-team-form")
     .addEventListener("submit", async (e) => {
 
         e.preventDefault();
-
-        const id = document.getElementById("team-id").value;
 
         const teamRequest = new TeamRequest(
             document.getElementById("team-name").value,
@@ -17,11 +15,14 @@ document
         );
 
         try {
-            await teamsService.update(id, teamRequest);
+            await teamsService.create(teamRequest);
 
-            alert("Team updated successfully");
+            alert("Team created successfully");
+
+            document.getElementById("create-team-form").reset();
+
         } catch (error) {
             console.error(error);
-            alert("Error updating team");
+            alert("Error creating team");
         }
     });
