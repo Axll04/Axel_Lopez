@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud para Team</title>
+    <link rel="stylesheet" href="./stylecrud.css">
+</head>
+<body>
+    <h1>Crud para Team</h1>
+    <form id="team-form">
+        <input type="hidden" id="team-id">
+        <div>
+            <label>Name:</label>
+              <input type="text" id="team-name" required>
+                  </div>
+                  <div>
+               <label>Description:</label>
+            <input type="text" id="team-description" required>
+        </div>
+
+        <button type="submit">Insertar</button>
+    </form>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Member Count</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="teams-table-body"></tbody>
+    </table>
+    <script type="module" src="./teams.js"></script>
+</body>
+</html>
